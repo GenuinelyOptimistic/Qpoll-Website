@@ -31,7 +31,7 @@ export function LandingPage() {
 
           {/* Tagline */}
           <p className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed mb-10 max-w-md">
-            Help people quickly crowd source information to make smarter
+            Help companies quickly crowd source information to make smarter
             decisions
           </p>
 
