@@ -21,7 +21,7 @@ export function PhoneMockup() {
               <div className="w-1 h-1 rounded-full bg-black"></div>
               <div className="w-1 h-1 rounded-full border border-black"></div>
             </div>
-            <span>QPoll</span>
+            <span>StreetTalk</span>
             <Wifi className="w-3 h-3 ml-1" />
           </div>
           <span>9:41 AM</span>

@@ -25,7 +25,7 @@ export function LandingPage() {
           {/* Logo */}
           <div className="mb-8">
             <h1 className="text-6xl font-bold tracking-tighter text-gray-900">
-              Qpoll
+              StreetTalk
             </h1>
           </div>
 

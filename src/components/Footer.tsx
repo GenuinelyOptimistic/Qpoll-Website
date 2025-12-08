@@ -32,7 +32,7 @@ export function Footer() {
         </nav>
 
         <div className="flex items-center gap-1">
-          <span>&copy; QPOLL</span>
+          <span>&copy; StreetTalk</span>
         </div>
       </div>
     </footer>;
