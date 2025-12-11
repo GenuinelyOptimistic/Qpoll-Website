@@ -1,5 +1,3 @@
-import React from 'react';
-import { Apple, Play } from 'lucide-react';
 import { Footer } from '../components/Footer';
 import { PhoneMockup } from '../components/PhoneMockup';
 export function LandingPage() {
@@ -23,23 +21,21 @@ export function LandingPage() {
         {/* Right Column: Content */}
         <div className="flex-1 w-full flex flex-col items-center md:items-start text-center md:text-left max-w-lg">
           {/* Logo */}
-          <div className="mb-8">
-            <h1 className="text-6xl font-bold tracking-tighter text-gray-900">
-              StreetTalk
-            </h1>
-          </div>
+          <h1 className="mb-4 text-6xl font-bold tracking-tighter text-gray-900 logo">
+            StreetTalk
+          </h1>
 
           {/* Tagline */}
-          <p className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed mb-10 max-w-md">
+          <p className="text-xl md:text-1xl text-gray-400 font-light mb-10 max-w-md">
             Help companies quickly crowd source information to make smarter
-            decisions
+            decisions.
           </p>
 
           {/* Store Buttons */}
           <div className="flex flex-row gap-4">
             {/* App Store */}
             <button className="bg-black text-white rounded-lg px-4 py-2 flex items-center gap-3 hover:opacity-80 transition-opacity">
-              <Apple className="w-8 h-8 fill-current" />
+              <img src="./assets/apple.svg" alt="Apple Logo" className="w-7 h-7" />
               <div className="flex flex-col items-start">
                 <span className="text-[10px] leading-none font-medium">
                   Download on the
