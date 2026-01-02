@@ -1,5 +1,4 @@
-import React from 'react';
-import { LandingPage } from './pages/LandingPage';
+import { TermsPage } from "./pages/TermsPage";
 export function App() {
-  return <LandingPage />;
+	return <TermsPage />;
 }
