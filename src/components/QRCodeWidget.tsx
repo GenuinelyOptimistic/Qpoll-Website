@@ -17,7 +17,7 @@ export function QRCodeWidget() {
 					Scan to download
 				</p>
 				<p className="text-[10px] text-gray-500 mt-0.5 leading-tight">
-					Get the StreetTalk app
+					Get the Knoli app
 				</p>
 			</div>
 		</div>

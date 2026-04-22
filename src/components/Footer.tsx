@@ -63,7 +63,7 @@ export function Footer() {
 				</nav>
 
 				<div className="flex items-center gap-1">
-					<span>&copy; StreetTalk</span>
+					<span>&copy; Knoli</span>
 				</div>
 			</div>
 		</footer>
