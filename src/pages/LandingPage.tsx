@@ -1,5 +1,6 @@
 import { Footer } from "../components/Footer";
 import { PhoneMockup } from "../components/PhoneMockup";
+import { QRCodeWidget } from "../components/QRCodeWidget";
 export function LandingPage() {
 	return (
 		<div className="min-h-screen bg-white flex flex-col font-sans text-gray-900">
@@ -93,6 +94,7 @@ export function LandingPage() {
 			</main>
 
 			<Footer />
+			<QRCodeWidget />
 		</div>
 	);
 }
