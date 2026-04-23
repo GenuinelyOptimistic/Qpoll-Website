@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import knoliLogo from "../../assets/imgs/knoli-logo.svg";
 
 export function Header() {
 	const location = useLocation();
@@ -7,11 +8,8 @@ export function Header() {
 	return (
 		<nav className="absolute top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
 			<div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-				<Link
-					to="/"
-					className="text-xl font-bold text-gray-900 tracking-tight hover:opacity-70 transition-opacity"
-				>
-					Knoli
+				<Link to="/" className="hover:opacity-70 transition-opacity">
+					<img src={knoliLogo} alt="Knoli" className="h-5 w-auto" />
 				</Link>
 
 				<div className="flex items-center gap-1">
@@ -30,7 +28,7 @@ export function Header() {
 						href="#download"
 						className="ml-2 px-4 py-2 rounded-full text-sm bg-gray-400 text-white hover:bg-gray-700 transition-colors"
 					>
-						Download
+						Rquest Beta Access
 					</a>
 				</div>
 			</div>

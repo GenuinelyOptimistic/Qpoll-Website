@@ -13,10 +13,10 @@ export function LandingPage() {
 				{/* Left: Copy */}
 				<div className="relative z-10 flex-1 flex flex-col items-center md:items-start text-center md:text-left max-w-xl">
 					{/* Badge */}
-					<div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm font-medium text-gray-600 shadow-sm mb-8">
+					{/* <div className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-1.5 text-sm font-medium text-gray-600 shadow-sm mb-8">
 						<span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
 						$6.5 USD paid out so far
-					</div>
+					</div> */}
 
 					<h1 className="text-5xl md:text-6xl font-bold tracking-tight text-gray-900 leading-[1.1] mb-6">
 						Get paid for{" "}
@@ -52,9 +52,10 @@ export function LandingPage() {
 						</div>
 						<p className="text-sm text-gray-500">
 							<span className="font-semibold text-gray-800">
-								7
+								14
 							</span>{" "}
-							people earning this week
+							active users so far
+							{/* people earning this week */}
 						</p>
 					</div>
 				</div>

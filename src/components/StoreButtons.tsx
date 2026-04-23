@@ -9,7 +9,11 @@ export function StoreButtons({
 		justify === "center" ? "justify-center" : "justify-start";
 	return (
 		<div className="flex flex-col gap-3">
-			{/* <span className={`text-sm font-medium opacity-60 flex ${justifyClass}`}>Coming soon to</span> */}
+			{/* <span
+				className={`text-sm font-medium opacity-60 flex ${justifyClass}`}
+			>
+				COMING SOON TO 
+			</span> */}
 			<div className={`flex flex-row gap-3 ${justifyClass}`}>
 				<button className="bg-gray-900 text-white rounded-xl px-5 py-3 flex items-center gap-3 hover:bg-gray-700 transition-colors shadow-md">
 					<img src={appleSvg} className="w-5 h-5" alt="Apple logo" />
