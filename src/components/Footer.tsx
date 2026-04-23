@@ -1,36 +1,32 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Twitter, Facebook } from "lucide-react";
 
 export function Footer() {
 	const links = [
 		{
 			label: "ABOUT US",
-			href: "#",
+			href: "/about",
 		},
 		{
-			label: "SUPPORT",
-			href: "#",
-		},
-		{
-			label: "PRIVACY",
+			label: "PRIVACY POLICY", //Consider changing to "PRIVACY" if more space is needed
 			href: "/privacy",
 		},
 		{
-			label: "TERMS",
+			label: "TERMS OF USE", //Consider changing to "TERMS" if more space is needed
 			href: "/terms",
 		},
+		// Consider adding "SUPPORT" page in the future
 		{
 			label: "BLOG",
-			href: "#",
+			href: "https://blog.knoli.app",
 		},
 		{
 			label: "TWITTER",
-			href: "#",
+			href: "https://twitter.com/knoliapp",
 		},
 		{
 			label: "FACEBOOK",
-			href: "#",
+			href: "https://facebook.com/knoliapp",
 		},
 	];
 
