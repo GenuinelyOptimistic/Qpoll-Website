@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import { Header } from "./components/Header";
 import { LandingPage } from "./pages/LandingPage";
 import { TermsPage } from "./pages/TermsPage";
@@ -8,10 +9,19 @@ import { PollsPage } from "./pages/PollsPage";
 import { ModalProvider } from "./context/ModalContext";
 import { BetaAccessModal } from "./components/BetaAccessModal";
 
+function ScrollToTop() {
+	const { pathname } = useLocation();
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, [pathname]);
+	return null;
+}
+
 export function App() {
 	return (
 		<ModalProvider>
 			<BrowserRouter>
+				<ScrollToTop />
 				<div className="relative">
 					<Header />
 					<div className="pt-[73px]">

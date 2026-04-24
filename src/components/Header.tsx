@@ -28,7 +28,7 @@ export function Header() {
 					</Link>
 					<button
 						onClick={open}
-						className="ml-2 px-4 py-2 rounded-full text-sm bg-gray-900 text-white hover:bg-gray-700 transition-colors"
+						className="hidden sm:block ml-2 px-4 py-2 rounded-full text-sm bg-gray-900 text-white hover:bg-gray-700 transition-colors"
 					>
 						Request Beta Access
 					</button>
