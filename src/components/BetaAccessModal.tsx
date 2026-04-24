@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X, CheckCircle } from "lucide-react";
 import { useModal } from "../context/ModalContext";
 
@@ -59,7 +59,13 @@ export function BetaAccessModal() {
 	>("idle");
 	const [errorMessage, setErrorMessage] = useState("");
 
-	if (!isOpen) return null;
+	useEffect(() => {
+		if (!isOpen) {
+			setForm({ email: "", age: "", gender: "", industry: "" });
+			setStatus("idle");
+			setErrorMessage("");
+		}
+	}, [isOpen]);
 
 	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault();
@@ -101,7 +107,7 @@ export function BetaAccessModal() {
 
 	return (
 		<div
-			className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm"
+			className={`fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm${isOpen ? "" : " hidden"}`}
 			onClick={handleBackdropClick}
 		>
 			<div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden">

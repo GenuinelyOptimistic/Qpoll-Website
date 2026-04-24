@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, startTransition } from "react";
 
 interface ModalContextType {
 	isOpen: boolean;
@@ -14,7 +14,7 @@ export function ModalProvider({ children }: { children: React.ReactNode }) {
 		<ModalContext.Provider
 			value={{
 				isOpen,
-				open: () => setIsOpen(true),
+				open: () => startTransition(() => setIsOpen(true)),
 				close: () => setIsOpen(false),
 			}}
 		>
