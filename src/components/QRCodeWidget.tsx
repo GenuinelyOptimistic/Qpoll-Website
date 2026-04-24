@@ -1,6 +1,6 @@
 import { QRCodeSVG } from "qrcode.react";
 
-const MESSAGE = "SMSTO:+18683311332:Sign me up for knoli!";
+const MESSAGE = "SMSTO:+18683311332:Sign me up for Knoli-SMS!";
 
 export function QRCodeWidget() {
 	return (
@@ -17,7 +17,7 @@ export function QRCodeWidget() {
 					Scan to Start Earning
 				</p>
 				<p className="text-[10px] text-gray-500 mt-0.5 leading-tight">
-					Text Knoli
+					Join Knoli-SMS Beta
 				</p>
 			</div>
 		</div>

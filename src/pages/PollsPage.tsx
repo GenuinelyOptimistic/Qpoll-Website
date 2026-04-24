@@ -1,7 +1,14 @@
 import { Footer } from "../components/Footer";
 import { StoreButtons } from "../components/StoreButtons";
+import { useSEO } from "../utils/useSEO";
 
 export function PollsPage() {
+	useSEO({
+		title: "Polls",
+		description: "Browse and answer polls on Knoli. Share your opinion on any topic and earn real money for your responses.",
+		keywords: "polls, browse polls, answer polls, earn money polls, opinion polls, paid polls",
+		canonicalPath: "/polls",
+	});
 	return (
 		<div className="min-h-screen bg-white flex flex-col font-sans text-gray-900">
 			<main className="flex-1 flex flex-col items-center justify-center px-6 py-24 text-center">

@@ -1,6 +1,12 @@
 import { Footer } from "../components/Footer";
+import { useSEO } from "../utils/useSEO";
 
 export function PrivacyPolicyPage() {
+	useSEO({
+		title: "Privacy Policy",
+		description: "Read Knoli's privacy policy. Learn how we collect, use, and protect your data on our polling and rewards platform.",
+		canonicalPath: "/privacy",
+	});
 	return (
 		<div className="min-h-screen bg-white flex flex-col font-sans text-gray-900">
 			<main className="flex-1 max-w-3xl mx-auto w-full px-6 py-16 md:py-24">

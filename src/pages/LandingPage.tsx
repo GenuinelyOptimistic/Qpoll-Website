@@ -2,10 +2,19 @@ import { QRCodeWidget } from "../components/QRCodeWidget";
 import { Footer } from "../components/Footer";
 import { StoreButtons } from "../components/StoreButtons";
 import { PhoneMockup } from "../components/PhoneMockup";
+import { useSEO } from "../utils/useSEO";
 // import { FeaturesSection } from "../components/FeaturesSection";
 // import { DownloadCTA } from "../components/DownloadCTA";
 
 export function LandingPage() {
+	useSEO({
+		title: "Home",
+		description:
+			"Answer polls, share your opinions, and earn real money. Knoli turns crowd-sourced insights into rewards for everyone.",
+		keywords:
+			"polls, earn money, paid surveys, opinion polls, get paid for opinions, crowd-sourced insights, polling app, survey rewards, make money online, paid polling",
+		canonicalPath: "/",
+	});
 	return (
 		<div className="min-h-screen bg-white flex flex-col font-sans text-gray-900 overflow-x-hidden">
 			{/* Hero Section */}

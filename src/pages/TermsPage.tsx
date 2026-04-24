@@ -1,6 +1,12 @@
 import { Footer } from "../components/Footer";
+import { useSEO } from "../utils/useSEO";
 
 export function TermsPage() {
+	useSEO({
+		title: "Terms of Service",
+		description: "Read Knoli's terms of service. Understand the rules and guidelines for using our polling and rewards platform.",
+		canonicalPath: "/terms",
+	});
 	return (
 		<div className="min-h-screen bg-white flex flex-col font-sans text-gray-900">
 			<main className="flex-1 max-w-3xl mx-auto w-full px-6 py-16 md:py-24">

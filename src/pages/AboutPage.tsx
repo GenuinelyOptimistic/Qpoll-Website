@@ -1,6 +1,13 @@
 import { Footer } from "../components/Footer";
+import { useSEO } from "../utils/useSEO";
 
 export function AboutPage() {
+	useSEO({
+		title: "About",
+		description: "Learn about Knoli's mission to give everyone a voice through real-time polling, crowd-sourced insights, and rewards for sharing your opinions.",
+		keywords: "about Knoli, polling platform, opinion app, crowd-sourced insights, earn rewards",
+		canonicalPath: "/about",
+	});
 	return (
 		<div className="min-h-screen bg-white flex flex-col font-sans text-gray-900">
 			<main className="flex-1 max-w-3xl mx-auto w-full px-6 py-16 md:py-24">

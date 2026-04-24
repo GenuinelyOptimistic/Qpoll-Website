@@ -1,9 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import knoliLogo from "../../assets/imgs/knoli-logo.svg";
+import { useModal } from "../context/ModalContext";
 
 export function Header() {
 	const location = useLocation();
+	const { open } = useModal();
 
 	return (
 		<nav className="absolute top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
@@ -24,12 +26,12 @@ export function Header() {
 						Explore Polls
 						<ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
 					</Link>
-					<a
-						href="#download"
-						className="ml-2 px-4 py-2 rounded-full text-sm bg-gray-400 text-white hover:bg-gray-700 transition-colors"
+					<button
+						onClick={open}
+						className="ml-2 px-4 py-2 rounded-full text-sm bg-gray-900 text-white hover:bg-gray-700 transition-colors"
 					>
-						Rquest Beta Access
-					</a>
+						Request Beta Access
+					</button>
 				</div>
 			</div>
 		</nav>
