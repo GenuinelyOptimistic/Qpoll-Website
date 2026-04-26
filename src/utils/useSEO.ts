@@ -3,7 +3,7 @@ import { useEffect } from "react";
 const BASE_URL = "https://knoli.app";
 const DEFAULT_DESCRIPTION =
 	"Answer polls, share your opinions, and earn real money. Knoli turns crowd-sourced insights into rewards for everyone.";
-const DEFAULT_IMAGE = `${BASE_URL}/assets/imgs/sample.png`;
+const DEFAULT_IMAGE = `${BASE_URL}/assets/imgs/og.png`;
 
 interface SEOProps {
 	title: string;
