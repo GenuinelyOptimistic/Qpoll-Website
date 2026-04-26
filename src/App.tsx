@@ -7,6 +7,7 @@ import { PrivacyPolicyPage } from "./pages/PrivacyPolicyPage";
 import { AboutPage } from "./pages/AboutPage";
 import { PollsPage } from "./pages/PollsPage";
 import { QRScanPage } from "./pages/QRScanPage";
+import { NotFoundPage } from "./pages/NotFoundPage";
 import { ModalProvider } from "./context/ModalContext";
 import { BetaAccessModal } from "./components/BetaAccessModal";
 
@@ -36,6 +37,7 @@ export function App() {
 							<Route path="/about" element={<AboutPage />} />
 							<Route path="/polls" element={<PollsPage />} />
 							<Route path="/qr" element={<QRScanPage />} />
+							<Route path="*" element={<NotFoundPage />} />
 						</Routes>
 					</div>
 					<BetaAccessModal />
