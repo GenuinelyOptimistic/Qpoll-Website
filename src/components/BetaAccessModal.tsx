@@ -43,6 +43,8 @@ const AGE_RANGES = [
 
 const GENDERS = ["Male", "Female", "Other"];
 
+const DEVICES = ["Android", "iOS", "Both"];
+
 const selectClass =
 	"w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-700 bg-white appearance-none cursor-pointer";
 
@@ -53,6 +55,7 @@ export function BetaAccessModal() {
 		age: "",
 		gender: "",
 		industry: "",
+		device: "",
 	});
 	const [status, setStatus] = useState<
 		"idle" | "loading" | "success" | "error"
@@ -61,7 +64,7 @@ export function BetaAccessModal() {
 
 	useEffect(() => {
 		if (!isOpen) {
-			setForm({ email: "", age: "", gender: "", industry: "" });
+			setForm({ email: "", age: "", gender: "", industry: "", device: "" });
 			setStatus("idle");
 			setErrorMessage("");
 		}
@@ -229,6 +232,28 @@ export function BetaAccessModal() {
 									{INDUSTRIES.map((ind) => (
 										<option key={ind} value={ind}>
 											{ind}
+										</option>
+									))}
+								</select>
+							</div>
+
+							<div>
+								<label className="block text-sm font-medium text-gray-700 mb-1.5">
+									Device
+								</label>
+								<select
+									name="device"
+									required
+									value={form.device}
+									onChange={handleChange}
+									className={selectClass}
+								>
+									<option value="" disabled>
+										Select your device
+									</option>
+									{DEVICES.map((d) => (
+										<option key={d} value={d}>
+											{d}
 										</option>
 									))}
 								</select>
