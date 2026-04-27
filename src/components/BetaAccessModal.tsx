@@ -43,7 +43,7 @@ const AGE_RANGES = [
 
 const GENDERS = ["Male", "Female", "Other"];
 
-const DEVICES = ["Android", "iOS", "Both"];
+const DEVICES = ["Android", "iOS", "Other"];
 
 const selectClass =
 	"w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent text-gray-700 bg-white appearance-none cursor-pointer";
@@ -64,7 +64,13 @@ export function BetaAccessModal() {
 
 	useEffect(() => {
 		if (!isOpen) {
-			setForm({ email: "", age: "", gender: "", industry: "", device: "" });
+			setForm({
+				email: "",
+				age: "",
+				gender: "",
+				industry: "",
+				device: "",
+			});
 			setStatus("idle");
 			setErrorMessage("");
 		}

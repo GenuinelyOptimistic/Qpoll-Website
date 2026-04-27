@@ -6,9 +6,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 		return res.status(405).json({ error: "Method not allowed" });
 	}
 
-	const { email, age, gender, industry } = req.body ?? {};
+	const { email, age, gender, industry, device } = req.body ?? {};
 
-	if (!email || !age || !gender || !industry) {
+	if (!email || !age || !gender || !industry || !device) {
 		return res.status(400).json({ error: "All fields are required." });
 	}
 
@@ -32,13 +32,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 				age TEXT NOT NULL,
 				gender TEXT NOT NULL,
 				industry TEXT NOT NULL,
+				device TEXT NOT NULL,
 				created_at TIMESTAMPTZ DEFAULT NOW()
 			)
 		`;
 
 		const result = await sql`
-			INSERT INTO beta_signups (email, age, gender, industry)
-			VALUES (${String(email)}, ${String(age)}, ${String(gender)}, ${String(industry)})
+			INSERT INTO beta_signups (email, age, gender, industry, device)
+			VALUES (${String(email)}, ${String(age)}, ${String(gender)}, ${String(industry)}, ${String(device)})
 			ON CONFLICT (email) DO NOTHING
 			RETURNING id
 		`;
